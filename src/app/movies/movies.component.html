@@ -1,19 +1,15 @@
 <main>
-    <section class="jumbotron text-center">
-      <div>
-        <h1>Movie Collection</h1>
-        <p class="lead text-muted">Listing all the movies you have added to your collection. Enjoy!</p>
-      </div>
-    </section>
+    <div class="intro">
+      <h1>Movie Collection</h1>
+      <p>Listing all the movies you have added to your collection. Enjoy!</p>
+    </div>
 
-    <div class="card-deck">
-        <div class="card" *ngFor="let movie of movies">
-            <img src="{{ movie.cover }}" class="card-img-top rounded-lg" alt="Cover for {{ movie.title }}">
-            <div class="card-body">
-                <h5 class="card-title">{{ movie.title }}</h5>
-                <h6 class="card-title" *ngIf="movie.subtitle !== ''">({{ movie.subtitle }})</h6>
-                <hr>
-                <p class="card-text" *ngIf="movie.watched">Last watched: {{ movie.watchedDate }}</p>
+    <div class="item-list">
+        <div class="item-card" *ngFor="let movie of movies">
+            <div class="item-info">
+            <img src="{{ movie.cover }}" class="item-img" alt="Cover for {{ movie.title }}">
+                <h5 class="item-title">{{ movie.title }}</h5>
+                <h6 class="item-title" *ngIf="movie.subtitle !== ''">({{ movie.subtitle }})</h6>
             </div>
         </div>
     </div>
