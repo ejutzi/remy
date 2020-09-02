@@ -1,0 +1,23 @@
+.title {
+  color: #6fe4e4;
+  font-size: 250%;
+  text-align: center;
+  text-shadow: 1px 2px #000000;
+  background-color: #E9ECEF;
+}
+
+.titleHighlight {
+  color: #FF9D4C;
+  font-size: 250%;
+  text-align: center;
+  text-shadow: 2px 3px #000000;
+}
+
+.titleBlack {
+  color: #666666;
+  font-size: 250%;
+}
+
+.titleSpace {
+  padding-right: 0.6em;
+}
