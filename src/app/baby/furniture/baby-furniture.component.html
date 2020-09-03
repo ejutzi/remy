@@ -1,0 +1,42 @@
+<main>
+  <div class="intro">
+    <h1>Möbel, Dekoration und Zubehör</h1>
+  </div>
+
+  <div class="item-list">
+    <div class="item-card" *ngFor="let furniture of babyfurniture">
+      <div class="item-info">
+        <img src="{{ furniture.picture }}" class="item-img" alt="Cover for {{ furniture.title }}">
+
+        <h5 class="item-title">{{ furniture.title }}</h5>
+        <h6 *ngIf="furniture.description !== ''">({{ furniture.description }})</h6>
+        <table class="item-table">
+          <tr *ngIf="furniture.manufacturer !== ''">
+            <td><h6>Hersteller:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.manufacturer }}</h6></td>
+          </tr>
+          <tr *ngIf="furniture.manufacturerid !== ''">
+            <td><h6>Hersteller-Nr.:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.manufacturerid }}</h6></td>
+          </tr>
+          <tr *ngIf="furniture.size !== ''">
+            <td><h6>Größe:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.size }}</h6></td>
+          </tr>
+          <tr *ngIf="furniture.weight !== ''">
+            <td><h6>Gewicht:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.weight }}</h6></td>
+          </tr>
+          <tr *ngIf="furniture.color !== ''">
+            <td><h6>Farbe:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.color }}</h6></td>
+          </tr>
+          <tr *ngIf="furniture.material !== ''">
+            <td><h6>Material:</h6></td>
+            <td><h6 class="item-tb-details">{{ furniture.material }}</h6></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

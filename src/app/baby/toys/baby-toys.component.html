@@ -1,0 +1,26 @@
+<main>
+  <div class="intro">
+    <h1>Spielzeug</h1>
+  </div>
+
+  <div class="item-list">
+    <div class="item-card" *ngFor="let toy of babytoys">
+      <div class="item-info">
+        <img src="{{ toy.picture }}" class="item-img" alt="Cover for {{ toy.title }}">
+
+        <h5 class="item-title">{{ toy.title }}</h5>
+        <h6 *ngIf="toy.description !== ''">({{ toy.description }})</h6>
+        <table class="item-table">
+          <tr>
+            <td><h6>Hersteller:</h6></td>
+            <td><h6 class="item-tb-details">{{ toy.manufacturer }}</h6></td>
+          </tr>
+          <tr>
+            <td><h6>Hersteller-Nr.:</h6></td>
+            <td><h6 class="item-tb-details">{{ toy.manufacturerid }}</h6></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>

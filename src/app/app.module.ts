@@ -14,6 +14,10 @@ import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
 import { BooksComponent } from './books/books.component';
 import { MusicComponent } from './music/music.component';
+import { BabyClothingComponent } from './baby/clothing/baby-clothing.component';
+import { BabyEquipmentComponent } from './baby/equipment/baby-equipment.component';
+import { BabyFurnitureComponent } from './baby/furniture/baby-furniture.component';
+import { BabyToysComponent } from './baby/toys/baby-toys.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { MusicComponent } from './music/music.component';
     MoviesComponent,
     SeriesComponent,
     BooksComponent,
-    MusicComponent
+    MusicComponent,
+    BabyClothingComponent,
+    BabyEquipmentComponent,
+    BabyFurnitureComponent,
+    BabyToysComponent
   ],
   imports: [
     BrowserModule,
