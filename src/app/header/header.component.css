@@ -2,6 +2,12 @@
   background-color: #FFC89A;
 }
 
+.logo {
+  width: 75px;
+  height: 75px;
+  background-color: #777777;
+}
+
 .title {
   color: #6fe4e4;
   font-size: 250%;
