@@ -11,6 +11,7 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   padding-top: 1em;
+  padding-bottom: 0.8em;
   width: 100px;
 }
 
@@ -57,14 +58,16 @@
   margin: 1em;
 }
 
+.active {
+  background-color: #FFAB69;
+}
+
 .navigation a {
-  border-top: 1px solid #777777;
-  border-bottom: 1px solid #777777;
   color: #6DC9F7;
   padding: 1em 2.5em;
 }
 
-.navigation a:first-child {
+.navigation a {
   border-left: 1px solid #777777;
 }
 
