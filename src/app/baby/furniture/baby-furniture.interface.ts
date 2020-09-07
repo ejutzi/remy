@@ -3,6 +3,8 @@ export interface BabyFurniture {
   title: string;
   description: string;
   category: string;
+  subcategory: string;
+  specific: string;
   picture: string[];
   size: string;
   weight: string;
@@ -10,6 +12,7 @@ export interface BabyFurniture {
   material: string;
   manufacturer: string;
   manufacturerid: string;
-  amazonid: string;
-  amazonUrl: string;
+  supplier: string;
+  supplierId: string;
+  supplierUrl: string;
 }
