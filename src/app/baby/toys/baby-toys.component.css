@@ -1,12 +1,12 @@
 main {
-  background-color: #FFEAD8;
-  border: 1px solid #000000;
+  background-color: #E6F3FF;
 }
 
 .intro {
-  background-color: #FFC799;
+  background-color: #9AD1FF;
   padding: 0.5em 0.5em 0 0.5em;
-  border-bottom: 1px solid #000000;
+  border-top: 1px solid #2B3038;
+  border-bottom: 1px solid #2B3038;
 }
 
 .content-container {
@@ -17,7 +17,7 @@ main {
 .item-filter {
   flex: 10%;
   min-width: 150px;
-  background-color: #FFEAD8;
+  background-color: #E6F3FF;
 }
 
 .item-list {

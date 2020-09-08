@@ -1,31 +1,103 @@
 * {
-    font-family: 'Baloo Chettan 2', cursive;
-    background-color: #FFC89A;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
+  font-family: 'Baloo Chettan 2', cursive;
+  background-color: #FFC89A;
 }
 
 main {
-  background-color: #777777;
+  display: flex;
+  flex-direction: column;
 }
 
-h1 {
-    color: #336699;
-    font-size: 250%;
+.content {
+  flex: 1 auto;
 }
 
-h2, h3 {
-    color: #444444;
-    font-weight: lighter;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
 
-body {
-    margin: 2em;
+.header {
+  display: flex;
+  justify-content: left;
 }
 
-body, input[type="text"], button {
-    color: #333333;
+.logo {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  padding-top: 1em;
+  padding-bottom: 0.8em;
+  width: 100px;
+}
+
+.title-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #9AD1FF;
+  font-size: 130%;
+  background-color: #FFC89A;
+  text-shadow: 0px 0px 2px #000000, 0px 0px 3px #2B3038;
+}
+
+.titleHighlight {
+  color: #FFA55A;
+  font-size: 230%;
+  text-align: center;
+}
+
+.titleBlack {
+  color: #2B3038;
+  font-size: 270%;
+  text-shadow: none;
+}
+
+.titleSpace {
+  padding-right: 0.6em;
+}
+
+.navigation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation {
+  padding: 1.7em 1em 1em 1em;
+  margin: 1em;
+}
+
+.active {
+  background-color: #FFA55A;
+}
+
+.navigation a {
+  color: #9AD1FF;
+  text-shadow: 0px 0px 2px #000000, 0px 0px 3px #2B3038;
+  padding: 1em 2.5em;
+}
+
+.navigation a {
+  border-left: 1px solid #2B3038;
+}
+
+.navigation a:last-child {
+  border-right: 1px solid #2B3038;
+}
+
+.navigation a:hover {
+  color: #FFA55A;
+  text-decoration: none;
+  background-color: #A8AEB7;
+  text-shadow: 0px 0px 2px #000000, 0px 0px 3px #2B3038;
 }
