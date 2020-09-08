@@ -3,7 +3,7 @@ import { BabyEquipment } from './baby-equipment.interface';
 export const BABYEQUIP: BabyEquipment[] = [
     {
         id: 1,
-        title: "Tragetuch - elastisches Babytragetuch für Früh- und Neugeborene",
+        title: "Tragetuch - elastisches Babytragetuch",
         description: "inkl. Baby Wrap Carrier Anleitung",
         category: "Baby Equipment",
         picture:

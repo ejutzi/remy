@@ -66,7 +66,7 @@ export const BABYFURNITURE: BabyFurniture[] = [
     },
     {
         id: 4,
-        title: "LED Lichterkette mit Cotton Balls inkl. Timer und Dimmer (20 Kugeln)",
+        title: "LED Lichterkette mit Cotton Balls",
         description: "",
         category: "Baby",
         subcategory: "Furniture",

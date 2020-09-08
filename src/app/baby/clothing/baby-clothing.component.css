@@ -9,7 +9,19 @@ main {
   border-bottom: 1px solid #000000;
 }
 
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-filter {
+  flex: 10%;
+  min-width: 150px;
+  background-color: #C3D2D2;
+}
+
 .item-list {
+  flex: 90%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -17,7 +29,8 @@ main {
 .item-card {
   display: flex;
   flex-wrap: wrap;
-  background-color: #FFC89A;
+  background-color: #FFFFFF;
+  border: 1px solid #FFC89A;
   padding: 3px;
   margin: 5px;
   border-radius: 3px;
@@ -25,10 +38,20 @@ main {
   overflow: hidden;
 }
 
+.item-img-bg {
+  display: flex;
+  background-color: #FFFFFF;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 .item-img {
   width: 100%;
-  max-width: 300px;
   height: auto;
+  max-width: 250px;
+  max-height: 250px;
   object-fit: cover;
 }
 
@@ -40,12 +63,16 @@ main {
 }
 
 .item-title {
-  margin: 10px 0;
+  border-top: 1px solid #FFC89A;
+  height: 4em;
+  margin: 1em 0;
+  padding: 1em 0;
 }
 
 .item-table {
   width: 100%;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .item-table td {

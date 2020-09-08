@@ -6,10 +6,11 @@
   <div class="item-list">
     <div class="item-card" *ngFor="let toy of babytoys">
       <div class="item-info">
-        <img src="{{ toy.picture }}" class="item-img" alt="Cover for {{ toy.title }}">
-
+        <div class="item-img-bg">
+          <img src="{{ toy.picture }}" class="item-img" alt="Cover for {{ toy.title }}">
+        </div>
         <h5 class="item-title">{{ toy.title }}</h5>
-        <h6 *ngIf="toy.description !== ''">({{ toy.description }})</h6>
+        <!--<h6 *ngIf="toy.description !== ''">({{ toy.description }})</h6>-->
         <table class="item-table">
           <tr>
             <td><h6>Hersteller:</h6></td>
