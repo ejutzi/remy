@@ -67,6 +67,16 @@ main {
   padding-right: 0.6em;
 }
 
+.title a {
+  color: #9AD1FF;
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: #9AD1FF;
+  text-decoration: none;
+}
+
 .navigation-container {
   display: flex;
   flex-wrap: wrap;

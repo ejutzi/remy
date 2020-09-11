@@ -5,7 +5,11 @@ import { BABYEQUIP } from './baby-equipment-mock';
 @Component({
   selector: 'app-baby-equipment',
   templateUrl: './baby-equipment.component.html',
-  styleUrls: ['./baby-equipment.component.css']
+  styleUrls:
+    [
+      '../baby.component.css',
+      './baby-equipment.component.css'
+    ]
 })
 export class BabyEquipmentComponent implements OnInit  {
   babyequip = BABYEQUIP;
