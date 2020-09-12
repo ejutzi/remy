@@ -1,0 +1,214 @@
+<div class="admin-container">
+  <div class="admin">
+    <form #itemForm="ngForm" (ngSubmit)="onCreateItem(itemForm.value)">
+      <ul class="add-container">
+        <li class="add-item">
+          <label for="title">Title</label><br />
+          <input
+            type="text"
+            id="title"
+            required
+            ngModel
+            name="title"
+          />
+        </li>
+        <li class="add-item">
+          <label for="subtitle">Subtitle</label><br />
+          <input
+            type="text"
+            id="subtitle"
+            ngModel
+            name="subtitle"
+          />
+        </li>
+        <li class="add-item">
+          <label for="description">Description</label><br />
+          <textarea
+            id="description"
+            ngModel
+            name="description"
+        ></textarea>
+        </li>
+        <li class="add-item">
+          <label for="category">Category</label><br />
+          <input
+            type="text"
+            id="category"
+            ngModel
+            name="category"
+          />
+        </li>
+        <li class="add-item">
+          <label for="subcategory">Subcategory</label><br />
+          <input
+            type="text"
+            id="subcategory"
+            ngModel
+            name="subcategory"
+          />
+        </li>
+        <li class="add-item">
+          <label for="specific">Specific</label><br />
+          <input
+            type="text"
+            id="specific"
+            ngModel
+            name="specific"
+          />
+        </li>
+        <li class="add-item">
+          <label for="quantity">Quantity</label><br />
+          <input
+            type="text"
+            id="quantity"
+            ngModel
+            name="quantity"
+          />
+        </li>
+        <li class="add-item">
+          <label for="picture">Picture</label><br />
+          <input
+            type="text"
+            id="picture"
+            ngModel
+            name="picture"
+          />
+        </li>
+        <li class="add-item">
+          <label for="size">Size</label><br />
+          <input
+            type="text"
+            id="size"
+            ngModel
+            name="size"
+          />
+        </li>
+        <li class="add-item">
+          <label for="weight">Weight</label><br />
+          <input
+            type="text"
+            id="weight"
+            ngModel
+            name="weight"
+          />
+        </li>
+        <li class="add-item">
+          <label for="color">Color</label><br />
+          <input
+            type="text"
+            id="color"
+            ngModel
+            name="color"
+          />
+        </li>
+        <li class="add-item">
+          <label for="material">Material</label><br />
+          <input
+            type="text"
+            id="material"
+            ngModel
+            name="material"
+          />
+        </li>
+        <li class="add-item">
+          <label for="manufacturer">Manufacturer</label><br />
+          <input
+            type="text"
+            id="manufacturer"
+            ngModel
+            name="manufacturer"
+          />
+        </li>
+        <li class="add-item">
+          <label for="manufacturerId">Manufacturer ID</label><br />
+          <input
+            type="text"
+            id="manufacturerId"
+            ngModel
+            name="manufacturerId"
+          />
+        </li>
+        <li class="add-item">
+          <label for="supplier">Supplier</label><br />
+          <input
+            type="text"
+            id="supplier"
+            ngModel
+            name="supplier"
+          />
+        </li>
+        <li class="add-item">
+          <label for="supplierId">Supplier ID</label><br />
+          <input
+            type="text"
+            id="supplierId"
+            ngModel
+            name="supplierId"
+          />
+        </li>
+        <li class="add-item">
+          <label for="supplierUrl">Supplier URL</label><br />
+          <input
+            type="text"
+            id="supplierUrl"
+            ngModel
+            name="supplierUrl"
+          />
+        </li>
+
+        <hr />
+          <button
+            type="submit"
+            [disabled]="!itemForm.valid"
+          >
+            Add Item
+          </button>
+      </ul>
+    </form>
+
+  <hr />
+  <div>
+    <div>
+      <button (click)="onFetchItems()">
+        Fetch Items
+      </button>
+      |
+      <button
+        [disabled]="loadedItems.length < 1"
+        (click)="onClearItems()"
+      >
+        Clear Items
+      </button>
+    </div>
+  </div>
+
+  <hr />
+  <div>
+    <div>
+      <p *ngIf="loadedItems.length < 1 && !isFetching">No posts available!</p>
+      <ul class="fetch-container" *ngIf="loadedItems.length >= 1 && !isFetching">
+        <li class="fetch-item" *ngFor="let item of loadedItems">
+          <h3>Title: {{ item.title }}</h3>
+          <p *ngIf="item.subtitle !== ''">Subitle: {{ item.subtitle }}</p>
+          <p *ngIf="item.description !== ''">Description: {{ item.description }}</p>
+          <p *ngIf="item.category !== ''">Category: {{ item.category }}</p>
+          <p *ngIf="item.subcategory !== ''">Subcategory: {{ item.subcategory }}</p>
+          <p *ngIf="item.specific !== ''">Specific: {{ item.specific }}</p>
+          <p *ngIf="item.quantity !== ''">Quantity: {{ item.quantity }}</p>
+          <p>Picture: {{ item.picture }}</p>
+          <p *ngIf="item.size !== ''">Size: {{ item.size }}</p>
+          <p *ngIf="item.weight !== ''">Weight: {{ item.weight }}</p>
+          <p *ngIf="item.color !== ''">Color: {{ item.color }}</p>
+          <p *ngIf="item.material !== ''">Material: {{ item.material }}</p>
+          <p *ngIf="item.manufacturer !== ''">Manufacturer: {{ item.manufacturer }}</p>
+          <p *ngIf="item.manufacturerId !== ''">Manufacturer ID: {{ item.manufacturerId }}</p>
+          <p *ngIf="item.supplier !== ''">Supplier: {{ item.supplier }}</p>
+          <p *ngIf="item.supplierId !== ''">Supplier ID: {{ item.supplierId }}</p>
+          <p *ngIf="item.supplierUrl !== ''">Supplier URL: {{ item.supplierUrl }}</p>
+        </li>
+      </ul>
+      <p *ngIf="isFetching">Loading...</p>
+    </div>
+  </div>
+  </div>
+</div>

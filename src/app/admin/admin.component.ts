@@ -2,17 +2,22 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
-import { Item } from './item.interface';
+import { Item } from '../item.interface';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls:
+  [
+    '../app.component.css',
+    './admin.component.css'
+  ]
 })
-export class AppComponent {
+export class AdminComponent {
   title = 'ReMy';
 
   loadedItems: Item[] = [];
+  isFetching = false;
 
   constructor(private http: HttpClient) {
 
@@ -35,6 +40,10 @@ export class AppComponent {
     this.fetchItems();
   }
 
+  onClearItems() {
+
+  }
+
   private fetchItems() {
     this.http
       .get<{ [key: string]: Item }>('https://remy-c6dbc.firebaseio.com/items.json')
@@ -49,6 +58,7 @@ export class AppComponent {
         return itemsArray;
       }))
       .subscribe(items => {
+        this.isFetching = false;
         this.loadedItems = items;
     });
   }

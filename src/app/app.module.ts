@@ -1,10 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AdminComponent } from './admin/admin.component';
+
 import { MoviesComponent } from './movies/movies.component';
 import { SeriesComponent } from './series/series.component';
 import { BooksComponent } from './books/books.component';
@@ -17,6 +21,7 @@ import { BabyToysComponent } from './baby/toys/baby-toys.component';
 
 const appRoutes: Routes = [
   { path: '', component: BabyComponent },
+  { path: 'admn', component: AdminComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'series', component: SeriesComponent },
   { path: 'books', component: BooksComponent },
@@ -33,6 +38,7 @@ const appRoutes: Routes = [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    AdminComponent,
     MoviesComponent,
     SeriesComponent,
     BooksComponent,
@@ -45,7 +51,9 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,9 +24,13 @@ main {
   border-top: 1px solid #2B3038;
 }
 
-.header {
+.header-container {
   display: flex;
   justify-content: left;
+}
+
+.header {
+  border-bottom: 1px solid #2B3038;
 }
 
 .logo {

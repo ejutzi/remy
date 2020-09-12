@@ -1,0 +1,46 @@
+* {
+  background-color: #E6F3FF;
+}
+
+.admin-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.admin {
+  padding: 1em;
+  margin: 1em;
+}
+
+.add-container,
+.fetch-container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: flex-start;
+  padding: 0.2em;
+  margin: 0;
+  list-style: none;
+  border: 2px solid #71777c;
+}
+
+.add-container button {
+  width: 100px;
+  height: 32px;
+}
+
+.add-item {
+  min-width: 420px;
+  min-height: 6em;
+}
+
+.fetch-item {
+  max-width: 640px;
+  border: 1px solid #71777c;
+  padding: 5px;
+  margin: 3px;
+}
