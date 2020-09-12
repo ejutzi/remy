@@ -1,20 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
 import { Item } from './item.interface';
+import { ItemsService } from './items.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'ReMy';
 
   loadedItems: Item[] = [];
+  isFetching = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private itemsService: ItemsService) {
 
   }
 
@@ -23,12 +25,26 @@ export class AppComponent {
   }
 
   onCreateItem(itemData: Item) {
-    this.http.post(
-      'https://remy-c6dbc.firebaseio.com/items.json',
-      itemData
-    ).subscribe(responseData => {
-
-    });
+    this.itemsService.createItem(
+      itemData.id,
+      itemData.title,
+      itemData.subtitle,
+      itemData.description,
+      itemData.category,
+      itemData.subcategory,
+      itemData.specific,
+      itemData.quantity,
+      itemData.picture,
+      itemData.size,
+      itemData.weight,
+      itemData.color,
+      itemData.material,
+      itemData.manufacturer,
+      itemData.manufacturerId,
+      itemData.supplier,
+      itemData.supplierId,
+      itemData.supplierUrl
+    );
   }
 
   onFetchItems() {

@@ -34,6 +34,7 @@
           <input
             type="text"
             id="category"
+            required
             ngModel
             name="category"
           />
@@ -61,6 +62,7 @@
           <input
             type="text"
             id="quantity"
+            required
             ngModel
             name="quantity"
           />
@@ -70,6 +72,7 @@
           <input
             type="text"
             id="picture"
+            required
             ngModel
             name="picture"
           />
@@ -188,23 +191,23 @@
       <p *ngIf="loadedItems.length < 1 && !isFetching">No posts available!</p>
       <ul class="fetch-container" *ngIf="loadedItems.length >= 1 && !isFetching">
         <li class="fetch-item" *ngFor="let item of loadedItems">
-          <h3>Title: {{ item.title }}</h3>
-          <p *ngIf="item.subtitle !== ''">Subitle: {{ item.subtitle }}</p>
-          <p *ngIf="item.description !== ''">Description: {{ item.description }}</p>
-          <p *ngIf="item.category !== ''">Category: {{ item.category }}</p>
-          <p *ngIf="item.subcategory !== ''">Subcategory: {{ item.subcategory }}</p>
-          <p *ngIf="item.specific !== ''">Specific: {{ item.specific }}</p>
-          <p *ngIf="item.quantity !== ''">Quantity: {{ item.quantity }}</p>
-          <p>Picture: {{ item.picture }}</p>
-          <p *ngIf="item.size !== ''">Size: {{ item.size }}</p>
-          <p *ngIf="item.weight !== ''">Weight: {{ item.weight }}</p>
-          <p *ngIf="item.color !== ''">Color: {{ item.color }}</p>
-          <p *ngIf="item.material !== ''">Material: {{ item.material }}</p>
-          <p *ngIf="item.manufacturer !== ''">Manufacturer: {{ item.manufacturer }}</p>
-          <p *ngIf="item.manufacturerId !== ''">Manufacturer ID: {{ item.manufacturerId }}</p>
-          <p *ngIf="item.supplier !== ''">Supplier: {{ item.supplier }}</p>
-          <p *ngIf="item.supplierId !== ''">Supplier ID: {{ item.supplierId }}</p>
-          <p *ngIf="item.supplierUrl !== ''">Supplier URL: {{ item.supplierUrl }}</p>
+          <h3>Title<br />{{ item.title }}</h3>
+          <p *ngIf="item.subtitle !== ''">Subitle<br />{{ item.subtitle }}</p>
+          <p *ngIf="item.description !== ''">Description<br />{{ item.description }}</p>
+          <p>Category<br />{{ item.category }}</p>
+          <p *ngIf="item.subcategory !== ''">Subcategory<br />{{ item.subcategory }}</p>
+          <p *ngIf="item.specific !== ''">Specific<br />{{ item.specific }}</p>
+          <p>Quantity<br />{{ item.quantity }}</p>
+          <p>Picture<br />{{ item.picture }}</p>
+          <p *ngIf="item.size !== ''">Size<br />{{ item.size }}</p>
+          <p *ngIf="item.weight !== ''">Weight<br />{{ item.weight }}</p>
+          <p *ngIf="item.color !== ''">Color<br />{{ item.color }}</p>
+          <p *ngIf="item.material !== ''">Material<br />{{ item.material }}</p>
+          <p *ngIf="item.manufacturer !== ''">Manufacturer<br />{{ item.manufacturer }}</p>
+          <p *ngIf="item.manufacturerId !== ''">Manufacturer ID<br />{{ item.manufacturerId }}</p>
+          <p *ngIf="item.supplier !== ''">Supplier<br />{{ item.supplier }}</p>
+          <p *ngIf="item.supplierId !== ''">Supplier ID<br />{{ item.supplierId }}</p>
+          <p *ngIf="item.supplierUrl !== ''">Supplier URL<br />{{ item.supplierUrl }}</p>
         </li>
       </ul>
       <p *ngIf="isFetching">Loading...</p>

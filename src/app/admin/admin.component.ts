@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 
 import { Item } from '../item.interface';
+import { ItemsService } from '../items.service';
 
 @Component({
   selector: 'app-admin',
@@ -13,18 +13,22 @@ import { Item } from '../item.interface';
     './admin.component.css'
   ]
 })
-export class AdminComponent {
+export class AdminComponent implements OnInit {
   title = 'ReMy';
 
   loadedItems: Item[] = [];
   isFetching = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private itemsService: ItemsService) {
 
   }
 
   ngOnInit() {
-    this.fetchItems();
+    this.isFetching = true;
+    this.itemsService.fetchItems().subscribe(items => {
+      this.isFetching = false;
+      this.loadedItems = items;
+    });
   }
 
   onCreateItem(itemData: Item) {
@@ -37,29 +41,14 @@ export class AdminComponent {
   }
 
   onFetchItems() {
-    this.fetchItems();
+    this.isFetching = true;
+    this.itemsService.fetchItems().subscribe(items => {
+      this.isFetching = false;
+      this.loadedItems = items;
+    });
   }
 
   onClearItems() {
 
-  }
-
-  private fetchItems() {
-    this.http
-      .get<{ [key: string]: Item }>('https://remy-c6dbc.firebaseio.com/items.json')
-      .pipe(
-        map(responseData => {
-        const itemsArray: Item[] = [];
-        for (const key in responseData) {
-          if (responseData.hasOwnProperty(key)) {
-            itemsArray.push({ ...responseData[key], id: key })
-          }
-        }
-        return itemsArray;
-      }))
-      .subscribe(items => {
-        this.isFetching = false;
-        this.loadedItems = items;
-    });
   }
 }
