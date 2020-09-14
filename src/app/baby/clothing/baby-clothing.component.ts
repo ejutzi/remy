@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { BABYCLOTHING } from './baby-clothing-mock';
+import { Item } from '../../item.interface';
+import { ItemsService } from '../../items.service';
 
 @Component({
   selector: 'app-baby-clothing',
@@ -12,11 +14,19 @@ import { BABYCLOTHING } from './baby-clothing-mock';
     ]
 })
 export class BabyClothingComponent implements OnInit  {
-  babyclothing = BABYCLOTHING;
 
-  constructor() { }
+  loadedItems: Item[] = [];
+  isFetching = false;
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient, private itemsService: ItemsService) {
+
   }
 
+  ngOnInit() {
+    this.isFetching = true;
+    this.itemsService.fetchItems().subscribe(items => {
+      this.isFetching = false;
+      this.loadedItems = items;
+    });
+  }
 }

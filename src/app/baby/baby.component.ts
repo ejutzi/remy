@@ -26,6 +26,7 @@ export class BabyComponent implements OnInit  {
     this.itemsService.fetchItems().subscribe(items => {
       this.isFetching = false;
       this.loadedItems = items;
+      this.onFilterItems('Dummy');
     });
   }
 
@@ -43,10 +44,16 @@ export class BabyComponent implements OnInit  {
     this.itemsService.fetchItems().subscribe(items => {
       this.isFetching = false;
       this.loadedItems = items;
+      this.onFilterItems('Dummy');
     });
   }
 
   onClearItems() {
 
+  }
+
+  onFilterItems(filterArg) {
+    this.loadedItems.filter(i => i.subcategory === filterArg)
+    console.log(this.loadedItems);
   }
 }

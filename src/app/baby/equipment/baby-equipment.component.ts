@@ -1,22 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { BABYEQUIP } from './baby-equipment-mock';
+import { Item } from '../../item.interface';
+import { ItemsService } from '../../items.service';
 
 @Component({
   selector: 'app-baby-equipment',
   templateUrl: './baby-equipment.component.html',
   styleUrls:
     [
-      '../baby.component.css',
       './baby-equipment.component.css'
     ]
 })
 export class BabyEquipmentComponent implements OnInit  {
-  babyequip = BABYEQUIP;
 
-  constructor() { }
+  loadedItems: Item[] = [];
+  isFetching = false;
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient, private itemsService: ItemsService) {
+
   }
 
+  ngOnInit() {
+    this.isFetching = true;
+    this.itemsService.fetchItems().subscribe(items => {
+      this.isFetching = false;
+      this.loadedItems = items;
+    });
+  }
 }
