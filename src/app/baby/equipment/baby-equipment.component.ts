@@ -9,6 +9,7 @@ import { ItemsService } from '../../items.service';
   templateUrl: './baby-equipment.component.html',
   styleUrls:
     [
+      '../baby.component.css',
       './baby-equipment.component.css'
     ]
 })
