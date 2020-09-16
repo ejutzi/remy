@@ -35,6 +35,13 @@
             <p><span>Material:</span></p>
             <p>{{ item.material }}</p>
           </div>
+          <div class="supplier-spacing" *ngIf="item.supplier !== ''">
+            <p><span>Bestellt bei:</span></p>
+            <p>{{ item.supplier }}</p>
+          </div>
+          <div class="link-spacing" *ngIf="item.supplierUrl !== ''">
+            <a href="{{ item.supplierUrl }}" target="_blank">Link zum Artikel</a>
+          </div>
         </div>
       </div>
     </div>
