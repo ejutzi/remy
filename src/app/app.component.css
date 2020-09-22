@@ -9,7 +9,6 @@ main {
 }
 
 .content {
-  min-width: 100vw;
   min-height: calc(100vh - 80px);
   background-color: #E6F3FF;
 }
@@ -32,7 +31,6 @@ main {
 .header-container {
   display: flex;
   justify-content: left;
-  min-width: 100vw;
 }
 
 .header-container .logo {
