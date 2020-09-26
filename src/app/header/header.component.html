@@ -1,27 +1,20 @@
 <div class="header-container">
-  <img class="logo" [src]=logo>
+  <img class="icon" [src]=icon>
 
-  <div class="title-container">
-    <div class="title">
-      <a routerLink="/">
-        <span class="titleBlack">[</span>
-        <span class="titleHighlight">RE</span>
-        <span class="titleBlack">]</span>
-        <span class="titleSpace">mind</span>
-        <span class="titleBlack">[</span>
-        <span class="titleHighlight">MY</span>
-        <span class="titleBlack">]</span>
-        <span>self</span>
-      </a>
-    </div>
-  </div>
+  <a routerLink="/">
+    <img class="logo" [src]=logo>
+  </a>
 
   <div class="navigation-container">
-    <div class="navigation">
+    <ul class="menu-items">
       <a routerLinkActive="active" routerLink="/baby-clothing">Kleidung</a>
       <a routerLinkActive="active" routerLink="/baby-equipment">Equipment</a>
       <a routerLinkActive="active" routerLink="/baby-furniture">Möbel</a>
       <a routerLinkActive="active" routerLink="/baby-toys">Spielzeug</a>
-    </div>
+    </ul>
+  </div>
+
+  <div class="menu-btn">
+    <div class="menu-btn-lines"></div>
   </div>
 </div>

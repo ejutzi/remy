@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 main {
@@ -15,6 +17,32 @@ main {
   background-color: #9AD1FF;
   padding: 0.5em 0.5em 0 0.5em;
   border-bottom: 1px solid #2B3038;
+}
+
+.custom-shape-divider-top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #9AD1FF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-top svg {
+      width: calc(150% + 1.3px);
+      height: 150px;
+  }
 }
 
 .item-container {
