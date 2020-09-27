@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
 
@@ -20,23 +21,24 @@ import { BabyFurnitureComponent } from './baby/furniture/baby-furniture.componen
 import { BabyToysComponent } from './baby/toys/baby-toys.component';
 
 const appRoutes: Routes = [
-  { path: '', component: BabyComponent },
+  { path: '', component: HomeComponent },
   { path: 'admn', component: AdminComponent },
   { path: 'movies', component: MoviesComponent },
   { path: 'series', component: SeriesComponent },
   { path: 'books', component: BooksComponent },
   { path: 'music', component: MusicComponent },
   { path: 'baby', component: BabyComponent },
-  { path: 'baby-clothing', component: BabyClothingComponent },
-  { path: 'baby-equipment', component: BabyEquipmentComponent },
-  { path: 'baby-furniture', component: BabyFurnitureComponent },
-  { path: 'baby-toys', component: BabyToysComponent },
+  { path: 'baby/clothing', component: BabyClothingComponent },
+  { path: 'baby/equipment', component: BabyEquipmentComponent },
+  { path: 'baby/furniture', component: BabyFurnitureComponent },
+  { path: 'baby/toys', component: BabyToysComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
     FooterComponent,
     AdminComponent,
     MoviesComponent,
@@ -58,4 +60,4 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppRoutingModule { }

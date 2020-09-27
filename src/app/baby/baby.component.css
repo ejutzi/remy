@@ -4,6 +4,54 @@
   margin: 0px;
 }
 
+.nav-container {
+  display: flex;
+  align-items: center;
+  background-color: #9AD1FF;
+}
+
+/*
+sub-navigation styling
+*/
+.sub-navigation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.sub-navigation-container .sub-menu-items .active {
+  background-color: #FFA55A;
+}
+
+/*
+sub-navigation menu items
+*/
+.sub-navigation-container .sub-menu-items {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-navigation-container .sub-menu-items a {
+  color: #9AD1FF;
+  background-color: #FFC89A;
+  text-shadow: 0px 0px 2px #000000, 0px 0px 3px #2B3038;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 5px 5px rgba(0,0,0,.5);
+  padding: 0.7em 2em;
+  margin: 0 0.3em;
+}
+
+.sub-navigation-container .sub-menu-items a:hover {
+  color: #FFA55A;
+  text-decoration: none;
+  background-color: #688EAD;
+  text-shadow: 0px 0px 2px #000000, 0px 0px 3px #2B3038;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -14,9 +62,7 @@ main {
 }
 
 .intro {
-  background-color: #9AD1FF;
   padding: 0.5em 0.5em 0 0.5em;
-  border-bottom: 1px solid #2B3038;
 }
 
 .custom-shape-divider-top {
@@ -30,18 +76,27 @@ main {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 100px;
 }
 
 .custom-shape-divider-top .shape-fill {
   fill: #9AD1FF;
 }
 
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
+/*
+responsive divider
+*/
+@media (max-width: 1023px) {
+  .custom-shape-divider-top svg {
+      width: calc(120% + 1.3px);
+      height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
   .custom-shape-divider-top svg {
       width: calc(150% + 1.3px);
-      height: 150px;
+      height: 100px;
   }
 }
 
