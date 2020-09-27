@@ -124,6 +124,7 @@ menu button styling for responsive design
 
 }
 
+/*
 @media (max-width: 767px) {
   .menu-btn {
       display: flex;
@@ -159,3 +160,4 @@ menu button styling for responsive design
       color: #111111;
   }
 }
+*/
