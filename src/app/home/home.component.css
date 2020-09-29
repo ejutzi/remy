@@ -1,3 +1,24 @@
+* {
+  line-height: normal;
+}
+
+.intro, .content {
+  padding: 0.5em 0.5em 0 0.5em;
+}
+
+.content {
+  display: block;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  list-style-type: square;
+}
+
 .custom-shape-divider-top {
   position: relative;
   width: 100%;
@@ -31,26 +52,4 @@ responsive divider
       width: calc(150% + 1.3px);
       height: 100px;
   }
-}
-
-.intro, .content {
-  padding: 0.5em 0.5em 0 0.5em;
-}
-
-.content {
-  margin-top: 0.5em;
-}
-
-p {
-  padding: 0.3em 0.3em 0.3em 0;
-}
-
-ul {
-  list-style-type: square;
-}
-
-li {
-  display: block;
-  padding: 1.5em 0 0.5em 0;
-  overflow: none;
 }
