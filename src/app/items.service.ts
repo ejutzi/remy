@@ -27,7 +27,9 @@ export class ItemsService {
     manufacturerId: string,
     supplier: string,
     supplierId: string,
-    supplierUrl: string
+    supplierUrl: string,
+    clothingAge: string,
+    clothingSize: string
   ) {
     const itemData: Item = {
       id: id,
@@ -47,7 +49,9 @@ export class ItemsService {
       manufacturerId: manufacturerId,
       supplier: supplier,
       supplierId: supplierId,
-      supplierUrl: supplierUrl
+      supplierUrl: supplierUrl,
+      clothingAge: clothingAge,
+      clothingSize: clothingSize
     }
     this.http
     .post(

@@ -17,4 +17,6 @@ export interface Item {
   supplier: string;
   supplierId: string;
   supplierUrl: string;
+  clothingAge: string;
+  clothingSize: string;
 }

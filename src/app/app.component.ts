@@ -43,7 +43,9 @@ export class AppComponent implements OnInit {
       itemData.manufacturerId,
       itemData.supplier,
       itemData.supplierId,
-      itemData.supplierUrl
+      itemData.supplierUrl,
+      itemData.clothingAge,
+      itemData.clothingSize
     );
   }
 

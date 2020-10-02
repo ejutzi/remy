@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  line-height: normal;
   padding: 0px;
   margin: 0px;
 }
@@ -188,7 +189,8 @@ responsive divider
 }
 
 .item-container .item-card .item-content .item-info .supplier-spacing {
-  display: inline;
+  border-top: 1px solid #FFA55A;
+  margin-top: 0.7em;
   padding-top: 0.5em;
 }
 
@@ -199,6 +201,7 @@ responsive divider
 
 .item-container .item-card .item-content .item-info h3 {
   border-bottom: 1px solid #FFA55A;
+  margin-bottom: 0.3em;
 }
 
 .item-container .item-card .item-content .item-info h3, p {

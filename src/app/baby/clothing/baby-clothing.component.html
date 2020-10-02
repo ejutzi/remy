@@ -36,9 +36,13 @@
             <p><span>Hersteller-Nr.:</span></p>
             <p>{{ item.manufacturerId }}</p>
           </div>
-          <div *ngIf="item.size !== ''">
+          <div *ngIf="item.clothingSize !== ''">
             <p><span>Größe:</span></p>
-            <p>{{ item.size }}</p>
+            <p>{{ item.clothingSize }}</p>
+          </div>
+          <div *ngIf="item.clothingAge !== ''">
+            <p><span>Altersbereich:</span></p>
+            <p>{{ item.clothingAge }}</p>
           </div>
           <div *ngIf="item.weight !== ''">
             <p><span>Gewicht:</span></p>
