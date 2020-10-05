@@ -124,6 +124,29 @@ menu button styling for responsive design
 
 }
 
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 584px) {
+  .header-container .icon {
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+    width: 60px;
+  }
+
+  .header-container .logo {
+    padding-left: 0.5em;
+    width: 120px;
+  }
+
+  .header-navigation-container .menu-items a {
+    font-size: 1.2em;
+    box-shadow: 0 3px 5px rgba(0,0,0,.5);
+    padding: 0.8em 2.0em;
+  }
+}
+
 /*
 @media (max-width: 767px) {
   .menu-btn {
