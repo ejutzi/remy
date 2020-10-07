@@ -1,21 +1,23 @@
 * {
-  line-height: normal;
+  padding: 0px;
+  margin: 0px;
 }
 
-.intro, .content {
-  padding: 0.5em 0.5em 0 0.5em;
+main {
+  width: calc(100vw - 335px);
+  background-color: #E6F3FF;
+}
+
+.intro {
+  background-color: #84B3DA;
+  padding: 1em;
+  margin-bottom: 0.1em;
 }
 
 .content {
-  display: block;
-  margin-top: 0.5em;
-  min-width: 400px;
+  padding: 10px;
 }
 
-ul {
-  list-style-type: square;
-}
-
-li {
-  list-style-type: square;
+.content ul {
+  padding-left: 25px;
 }
