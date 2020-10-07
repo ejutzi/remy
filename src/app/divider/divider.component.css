@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+.custom-shape-divider-top {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #9AD1FF;
+}
+
+/*
+responsive divider
+*/
+@media (max-width: 1023px) {
+  .custom-shape-divider-top svg {
+      width: calc(120% + 1.3px);
+      height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-shape-divider-top svg {
+      width: calc(150% + 1.3px);
+      height: 100px;
+  }
+}
+
+@media (max-width: 584px) {
+  .sub-navigation-container .sub-menu-items a {
+    font-size: 1em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,.5);
+    padding: 0.3em 1em;
+    margin: 0 0.2em;
+  }
+}

@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Item } from '../../item.interface';
-import { ItemsService } from '../../items.service';
+import { Item } from '../../../item.interface';
+import { ItemsService } from '../../../items.service';
 
 @Component({
-  selector: 'app-baby-toys',
-  templateUrl: './baby-toys.component.html',
+  selector: 'app-baby-clothing',
+  templateUrl: './baby-clothing.component.html',
   styleUrls:
     [
       '../baby.component.css',
-      './baby-toys.component.css'
+      './baby-clothing.component.css'
     ]
 })
-export class BabyToysComponent implements OnInit  {
+export class BabyClothingComponent implements OnInit  {
 
   loadedItems: Item[] = [];
   isFetching = false;
