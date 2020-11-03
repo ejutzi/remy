@@ -2,6 +2,81 @@
   <h3>Kleidung</h3>
 </div>
 
+<div class="overview-container">
+  <div class="overview-sub">
+    <div class="overview-item-name">Body (kurz)</div>
+      <div class="overview-item">
+        <div class="overview-item-size">50 - 56:</div>
+        <div class="overview-item-count">2</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Body (lang)</div>
+      <div class="overview-item">
+        <div class="overview-item-size">50:</div>
+        <div class="overview-item-count">12</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-item-size">50 - 56:</div>
+        <div class="overview-item-count">2</div>
+      </div>
+      <div class="overview-item">
+        <div class="overview-item-size">62:</div>
+        <div class="overview-item-count">2</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Strampler</div>
+      <div class="overview-item">
+        <div class="overview-item-size">62:</div>
+        <div class="overview-item-count">2</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">T-Shirt</div>
+      <div class="overview-item">
+        <div class="overview-item-size">50:</div>
+        <div class="overview-item-count">1</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Pullover</div>
+      <div class="overview-item">
+        <div class="overview-item-size">56:</div>
+        <div class="overview-item-count">1</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Hose</div>
+    <div class="overview-item">
+      <div class="overview-item-size">50:</div>
+      <div class="overview-item-count">1</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-item-size">56:</div>
+      <div class="overview-item-count">1</div>
+    </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Schlafsack</div>
+      <div class="overview-item">
+        <div class="overview-item-size">50 - 56:</div>
+        <div class="overview-item-count">1</div>
+      </div>
+  </div>
+  <div class="overview-sub">
+    <div class="overview-item-name">Mütze</div>
+    <div class="overview-item">
+      <div class="overview-item-size">X:</div>
+      <div class="overview-item-count">1</div>
+    </div>
+    <div class="overview-item">
+      <div class="overview-item-size">40 - 41:</div>
+      <div class="overview-item-count">1</div>
+    </div>
+  </div>
+</div>
+
 <main>
   <div class="item-container" *ngFor="let item of loadedItems">
     <div class="item-card" *ngIf="item.subcategory == 'Clothing'">
@@ -26,6 +101,10 @@
           <div *ngIf="item.clothingAge !== ''">
             <p><span>Altersbereich:</span></p>
             <p>{{ item.clothingAge }}</p>
+          </div>
+          <div *ngIf="item.quantity > '1'">
+            <p><span>Anzahl:</span></p>
+            <p>{{ item.quantity }}</p>
           </div>
           <div *ngIf="item.weight !== ''">
             <p><span>Gewicht:</span></p>

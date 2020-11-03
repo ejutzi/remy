@@ -17,6 +17,55 @@ main {
   margin-bottom: 0.1em;
 }
 
+.overview-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #E6F3FF;
+  padding: 1em;
+  border-top: 5px solid #E6F3FF;
+  border-bottom: 5px solid #E6F3FF;
+}
+
+.overview-sub {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #545E69;
+  border-radius: 0 0.5em 0 0.5em;
+  padding: 0.3em;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #22252F;
+  margin: 0.1em;
+}
+
+.overview-item-name {
+  color: #FFA55A;
+  padding: 0.2em;
+  background-color: #22252F;
+  margin: 0.1em;
+  border-bottom: 2px solid #E6F3FF;
+}
+
+.overview-item-size {
+  color: #FFC89A;
+  padding: 0.2em;
+}
+
+.overview-item-count {
+  text-align: right;
+  color: #FFC89A;
+  padding: 0.2em 0.4em 0.2em 1.5em;
+}
+
 .item-container {
   position: relative;
 }
